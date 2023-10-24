@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>コンテナ空き状況一覧</title>
+  </head>
+  <body>
+    <ul>
+      {% for key, value in sites.items() %}
+      <li>{{ key }}:
+        <ul>
+          {% for k, v in value.items() %}
+          <li>{{ k }}: {{ v }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
+
