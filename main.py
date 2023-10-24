@@ -6,6 +6,6 @@ app = FastAPI()
 @app.get("/")
 def index():
     return {
-        name: "えみちゃん好き",
-        date: datetime.datetime.today()
+        "name": "えみちゃん好き",
+        "date": datetime.datetime.today()
     }
