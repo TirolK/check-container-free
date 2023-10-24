@@ -1,11 +1,14 @@
 from fastapi import FastAPI
-import datetime
+import requests
 
 app = FastAPI()
 
 @app.get("/")
 def index():
-    return {
-        "name": "えみちゃん好き",
-        "date": datetime.datetime.today()
-    }
+ 
+    url = "https://www.sejuku.net/blog/"
+    
+    response = requests.get(url)
+    response.encoding = response.apparent_encoding
+
+    return response.text
