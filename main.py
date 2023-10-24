@@ -5,4 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 def index():
-    return datetime.datetime.today()
+    return {
+        name: "えみちゃん好き",
+        date: datetime.datetime.today()
+    }
